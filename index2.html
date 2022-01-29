@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            border-radius: 200px;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        #shapes{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+            position: relative;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div>
+    <h1>Quick game</h1>
+    <p>Now let's play a quick Game! </p>
+    <img src="images/p7.png" alt="">
+    <p>How many Finger am I holding?🤔</p>
+    <input type="text" id="fingerI">
+    <button id="fingerB" >Enter</button>
+
+    <hr>
+    <h1>Test Your Reactions</h1>
+    <p>Click on the boxes and circles as quickly as you can</p>
+    <p class="bold">You Took: <span id="waqti"></span></p>
+    <div id ="shapes"></div>
+    <hr>
+</div>
+</center>
+    <script type="text/javascript">
+        document.getElementById("fingerB").onclick=function(){
+            var tiro=Math.random()
+            tiro=(tiro*5);
+            tiro=Math.floor(tiro);
+            if(document.getElementById("fingerI").value==tiro){
+                alert("Correct you got it right!!👍 "+tiro)
+            }
+            else{
+                alert("Nope!!, the correct guess is "+tiro)
+            }
+            
+        }
+
+        var start=new Date().getTime(); 
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function shapeAppear (){
+            var left = Math.random() * 400;
+            var top = Math.random() * 400;
+            var width=Math.random() * 400;
+            if(Math.random()>0.5){
+                document.getElementById("shapes").style.borderRadius="50px"
+            }else{
+                document.getElementById("shapes").style.borderRadius="0"
+            }
+            document.getElementById("shapes").style.backgroundColor=getRandomColor();
+            document.getElementById("shapes").style.width=width+"px";
+            document.getElementById("shapes").style.height=width+"px";
+            document.getElementById("shapes").style.top=top+"px";
+            document.getElementById("shapes").style.left=left+"px";
+            document.getElementById("shapes").style.display="block";
+            start=new Date().getTime();
+        }  
+        function delay () {
+        setTimeout(shapeAppear,Math.random() *2000);  }
+        delay();
+        document.getElementById("shapes").onclick=function(){
+            document.getElementById("shapes").style.display="none";
+            var end=new Date().getTime();
+            var timeTaken=((end-start)/1000);
+            document.getElementById("waqti").innerHTML=timeTaken+"s";
+            delay();
+            
+                       
+        }
+    </script>
+    
+</body>
+</html>

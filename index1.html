@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img src="images/p9.jpg" alt="" alt="Paris" class="center">
+<audio controls src="audio/a1.mp3.mp3"></audio>b
+<p>For you to continue the exam , please choose purple & indigo color <b>ONLY</b>!!! </p>
+<p><div class="circle" id="red-circle"></div>
+<div class="circle" id="purple-circle"></div>
+<div class="circle" id="blue-circle"></div>
+<div class="circle" id="indigo-circle"></div></p>  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+    <form action="">
+        <p>1. In which year did Somalia took independace ? </b></p>
+        <input type="radio" name="q1">1990
+        <input type="radio" name="q1">1970
+        <input type="radio" name="q1">1960 
+        <input type="radio" name="q1">1963
+        <p>2. Who was the first President of Somali ? </b></p>
+        <input type="radio" name="q2">Abdirashid Shermarke
+        <input type="radio" name="q2">Aden Adde 
+        <input type="radio" name="q2">Siad Barre
+        <input type="radio" name="q2">1963
+        <p>3. Who was the first Prime Minister of Somali ? </b></p>
+        <input type="radio" name="q3">Abdirizak Haji Hussein
+        <input type="radio" name="q3">Aden Adde
+        <input type="radio" name="q3">Muhammad Haji Ibrahim Egal 
+        <input type="radio" name="q3">Abdirashid Shermarke
+        <p>4. In which year Somali language was written ? </b></p>
+        <input type="radio" name="q4">1920-1922
+        <input type="radio" name="q4">1940-1960 
+        <input type="radio" name="q4">1930-1940
+        <input type="radio" name="q4">1950-1990
+        <p>5. Whom do you think next President will be ? </b></p>
+        <input type="radio" name="q5">Abdullahi Farmajo
+        <input type="radio" name="q5">Abdirahman Abdishakuur </b>
+        <input type="radio" name="q5">Ahmed Shariif
+        <input type="radio" name="q5">Xassan Shiikh
+    </form>
+    <hr>
+    <h4>Ansewrs bellow</h4>
+    <p id="one">1.</p>
+    <p id="two">2.</p>
+    <p id="three">3.</p>
+    <p id="four">4.</p>
+    <p id="five">5.</p>
+    <button id="answerB">View Ansewrs</button>
+    <hr>
+    <p>Well done 👍let's imagine you are the teacher now, How maney marks will have ?  </p>
+    <p>Marks 👇(0-5)</p>
+    <input type="text" id="marksI">
+    <button id="marksB">Enter Marks</button>
+    <p>Check out for crazy game 👇</p> <a href="file:///C:/Users/Ahmed%20Abdirashid%20ALi/Desktop/hall%20exam/index2.html"> <button>GO GAME</button></a>
+</div>
+<script>
+    document.getElementById("red-circle").onclick=function(){
+        var wrongRed="Red Nope!!, Wrong color"
+        alert(wrongRed);
+    }
+    document.getElementById("purple-circle").onclick=function(){
+        document.getElementById("purple-circle").style.display="none"
+    }
+    document.getElementById("blue-circle").onclick=function(){
+        var wrongBlue="Blue Nope!!, Wrong color"
+        alert(wrongBlue);
+    }
+    document.getElementById("indigo-circle").onclick=function(){
+        document.getElementById("indigo-circle").style.display="none"
+    }
+    document.getElementById("answerB").onclick=function(){
+        document.getElementById("one").innerHTML=document.getElementById("one").innerHTML+"1960";
+        document.getElementById("answerB").onclick=function(){
+            document.getElementById("two").innerHTML=document.getElementById("two").innerHTML+"Aden Adde";
+            document.getElementById("answerB").onclick=function(){
+                document.getElementById("three").innerHTML=document.getElementById("three").innerHTML+"Muhammad Haji Ibrahim Egal";
+                document.getElementById("answerB").onclick=function(){
+                document.getElementById("four").innerHTML=document.getElementById("four").innerHTML+"1940-1960";
+                document.getElementById("answerB").onclick=function(){
+                document.getElementById("five").innerHTML=document.getElementById("five").innerHTML+"Abdullahi Farmajo";
+            }
+            }
+            }
+        }
+    }
+    document.getElementById("marksB").onclick=function(){
+        var insertedP=document.getElementById("marksI").value;
+        var password=3;
+        if(insertedP>=password){
+            alert("Congratulation you made it!!! 👍:)")
+        }
+        else{alert ("You stupid nigga You know nothing")}
+        
+    }
+
+</script>
+   
+    
+</body>
+</html>
